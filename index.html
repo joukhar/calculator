@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>Calculator</h1>
+        <div id="calculator_box">
+            <input type="text" placeholder="0" value="" onkeypress="return isNumber(event)">
+            <div id="calculator_content">
+                <div id="buttons1">
+                    <button type="submit">7</button>
+                    <button type="submit">8</button>
+                    <button type="submit">9</button>
+                    <button type="submit">4</button>
+                    <button type="submit">5</button>
+                    <button type="submit">6</button>
+                    <button type="submit">1</button>
+                    <button type="submit">2</button>
+                    <button type="submit">3</button>
+                    <button id="btn0" type="submit">0</button>
+                    <button type="submit">.</button>
+                    <button type="submit">=</button>
+                </div>
+                <div id="buttons2">
+                    <button type="submit"  value=""><ion-icon name="backspace-outline"></ion-icon></button>
+                    <button type="submit" value="/">/</button>
+                    <button type="submit" value="*" ><ion-icon name="close-outline" title="*"></ion-icon></button>
+                    <button type="submit" value="-" ><ion-icon name="remove-outline"></ion-icon></button>
+                    <button type="submit" value="+"><ion-icon name="add-outline"></ion-icon></button>
+                </div>
+                <div id="slider">
+                    <ion-icon class="icon" name="chevron-back-outline"></ion-icon>
+                    <p id="item1">Designed By - Joukhar</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

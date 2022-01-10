@@ -1,0 +1,165 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: monospace;
+    font-size  : 25px;
+}
+
+body {
+    background: rgb(151, 151, 151);
+    width     : auto;
+}
+
+#container {
+    display        : flex;
+    flex-flow      : column;
+    justify-content: center;
+    align-items    : center;
+    width          : 100vw;
+    height         : 100vh;
+}
+
+#calculator_box {
+    width        : 56%;
+    height       : 60vh;
+    background   : rgb(194, 194, 194);
+    border-radius: 30px;
+    border       : 2px white solid;
+    box-shadow   : 15px 15px 15px rgba(0, 0, 0, 0.2), -15px -15px 15px rgba(255, 255, 255, 0.103);
+
+}
+
+input {
+    outline      : 0;
+    width        : 100%;
+    height       : 15%;
+    border       : 1px solid black;
+    border-radius: 30px 30px 0 0;
+    padding      : 20px;
+}
+
+input:focus {
+    color: cornflowerblue;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#calculator_content {
+    display              : grid;
+    grid-template-columns: 70% 20% 10%;
+    width                : 100%;
+    height               : 85%;
+    /* background        : chartreuse; */
+    border-radius        : 0 0 30px 30px;
+
+}
+
+#buttons1 {
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows   : repeat(4, 1fr);
+    gap                  : 2px;
+    border-right         : 1px solid black;
+    text-align           : center;
+
+}
+
+#buttons1 button {
+    display        : flex;
+    flex-flow      : row nowrap;
+    justify-content: center;
+    align-items    : center;
+    background     : transparent;
+    background     : white;
+    text-align     : center;
+    cursor         : pointer;
+}
+
+#buttons2 {
+    display           : grid;
+    grid-template-rows: repeat(5, 1fr);
+    gap               : 2px 0;
+}
+
+#buttons2 button {
+    background: white;
+    text-align: center;
+    cursor    : pointer;
+
+}
+
+#btn0 {
+    border-radius: 0 0 0 30px;
+}
+
+#slider {
+    background-color: rgb(0, 0, 0);
+    border-radius   : 0 0 30px 0;
+    display         : flex;
+    flex-flow       : column;
+    justify-content : center;
+    align-items     : center;
+    width           : 100%;
+    height          : 100%;
+    padding         : 20px 2px;
+    position        : relative;
+    overflow        : hidden;
+    transition      : transform 500ms;
+}
+
+#slider * {
+    color        : white;
+    cursor       : pointer;
+    font-size    : smaller;
+    border-radius: 0 0 30px 0;
+    width        : 100%;
+    height       : 100%;
+    position     : absolute;
+    z-index      : 5;
+}
+
+#slider p {
+    transition  : transform 500ms;
+    writing-mode: vertical-rl;
+    transform   : translate(25px, 10px);
+    font-size   : 15px;
+    z-index     : 4;
+}
+
+
+.icon {
+    transition: 500ms transform;
+}
+
+#slider.active {
+    transform: translate(25px, 10px);
+}
+
+#item1.active {
+    transform: translate(0px, 10px);
+}
+
+.icon.active {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width:630px) {
+    #calculator_box {
+        width : 80%;
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width:370px) {
+    #calculator_box {
+        width : 100%;
+        height: 70vh;
+    }
+
+    p {
+        display: none;
+    }
+}
